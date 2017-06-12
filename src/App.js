@@ -54,7 +54,7 @@ class App extends Component {
             <h1> String Generator </h1>
             <h4> Populate the page with whatever strings you want. </h4>
             <input type = "text" value = {this.state.data} 
-               onChange = {this.updateState} placeholder="Add string..." onfocus="this.placeholder=' '" />
+               onChange = {this.updateState} placeholder="Add string..." onFocus={(e) => e.target.placeholder = ""}  />
             <button onClick={this.addStringHandler}> Add String </button>
             <button onClick={this.add50StringHandler}> Add 50 Strings </button>
             <button onClick={this.add100StringHandler}> Add 100 Strings </button>
